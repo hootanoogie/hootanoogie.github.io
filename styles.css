@@ -1,0 +1,13 @@
+h1 {
+	font-size: 50px;
+}
+p {
+	color: #333;
+	font-size: 20px;
+}
+.copyright {
+	font-size: 15px;
+	font-family: sans-serif; 	
+	color: #aaa;
+	background-color: #eee;
+}
