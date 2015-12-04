@@ -1,2 +1,2 @@
 var name="Mattijs";
-alert('Welcome ' + name + "!");
+//alert('Welcome ' + name + "!");
