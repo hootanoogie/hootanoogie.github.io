@@ -24,51 +24,16 @@
 
 	<div class="container" ng-controller="StoreController as store">
 		<div class="row">
-			<div class="col-md-4">
+
+			<div ng-repeat="p in store.products" class="col-md-4">
 				<div class="product text-center">
 
 					<div class="row">
 						<div class="col-md-12">
-							{{store.product[0].name}}
+							{{p.name}}
 						</div>
 						<div class="col-md-12">
-							<img ng-src="{{store.product[0].image}}" alt="..." class="img-rounded prodimage" />
-						</div>
-						<div class="col-md-12">
-							Quantity:
-							<input type="number">
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-4">
-				<div class="product text-center">
-
-					<div class="row">
-						<div class="col-md-12">
-							{{store.product[0]}}
-						</div>
-						<div class="col-md-12">
-							<img src="wine2.jpg" alt="..." class="img-rounded prodimage" />
-						</div>
-						<div class="col-md-12">
-							Quantity:
-							<input type="number">
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-4">
-				<div class="product text-center">
-
-					<div class="row">
-						<div class="col-md-12">
-							{{store.product[0]}}
-						</div>
-						<div class="col-md-12">
-							<img src="wine3.jpg" alt="..." class="img-rounded prodimage" />
+							<img ng-src="{{p.image}}" alt="..." class="img-rounded prodimage" />
 						</div>
 						<div class="col-md-12">
 							Quantity:
