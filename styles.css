@@ -3,9 +3,11 @@
   background-color: grey;
   margin: 10px;
 }
+
 .prodimage {
   border: 1px solid black;
 }
+
 .copyright {
   font-size: 15px;
   font-family: sans-serif;

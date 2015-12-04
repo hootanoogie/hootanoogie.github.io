@@ -5,55 +5,36 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" href="sample-icon.png" type="image/x-icon" />
-
 	<link rel="apple-touch-icon" href="sample-icon.png" />
 	<link rel="icon" sizes="192x192" href="sample-icon.png" />
-
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<title>Order System</title>
-
 	<link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> </head>
 
-</head>
-
-<body>
+<body ng-controller="StoreController as store">
 	<h3>WebShop
 		<small>Welcome!</small>
 	</h3>
-
-	<div class="container" ng-controller="StoreController as store">
+	<div class="container">
 		<div class="row">
-
 			<div ng-repeat="p in store.products" class="col-md-4">
 				<div class="product text-center">
-
 					<div class="row">
+						<div class="col-md-12"> {{p.name}} </div>
 						<div class="col-md-12">
-							{{p.name}}
-						</div>
-						<div class="col-md-12">
-							<img ng-src="{{p.image}}" alt="..." class="img-rounded prodimage" />
-						</div>
-						<div class="col-md-12">
-							Quantity:
-							<input type="number">
-						</div>
+							<img ng-src="{{p.image}}" alt="..." class="img-responsive img-rounded prodimage"/> </div>
+						<div class="col-md-12">{{p.price | currency : 'zł ' }}</div>
+						<div class="col-md-12"> Quantity:
+							<input type="number" ng-model="p.quantity" id="input1"> </div>
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</div>
-
-	<div>
-		Your total is:
-	</div>
-
+	<div> Your total is: {{store.getTotal()}} </div>
 	<p></p>
-	<div class="copyright">
-		&copy; 2015 Mattijs Kersten
-	</div>
+	<div class="copyright"> &copy; 2015 Mattijs Kersten </div>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"></script>
 	<script src="script.js"></script>
 </body>
