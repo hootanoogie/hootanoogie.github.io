@@ -1,18 +1,14 @@
 .product {
-	text-center: 
-	border: 2px solid black;
-	background-color: #C80000;
-	margin: 10px;
+  text-center: border: 2px solid black;
+  background-color: grey;
+  margin: 10px;
 }
-
 .prodimage {
-	background-color: grey;
-	border: 1px solid black;
+  border: 1px solid black;
 }
-
 .copyright {
-	font-size: 15px;
-	font-family: sans-serif; 	
-	color: #aaa;
-	background-color: grey;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: black;
+  background-color: grey;
 }
